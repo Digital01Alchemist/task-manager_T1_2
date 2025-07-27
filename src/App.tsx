@@ -1,18 +1,30 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { TaskProvider } from './context/TaskContext';
+import { CssBaseline } from '@mui/material';
 import { HomePage } from './pages/HomePage';
 import { TaskPage } from './pages/TaskPage';
+import { CreateTaskPage } from './pages/CreateTaskPage';
 
+/**
+ * Главный компонент приложения
+ * Настраивает маршрутизацию и глобальные стили
+ * Включает все основные страницы приложения
+ */
 const App: React.FC = () => (
-  <TaskProvider>
+  <>
+    {/* Сброс CSS стилей для кроссбраузерной совместимости */}
+    <CssBaseline />
     <BrowserRouter>
       <Routes>
+        {/* Главная страница со списком задач */}
         <Route path="/" element={<HomePage />} />
+        {/* Страница создания новой задачи */}
+        <Route path="/task/new" element={<CreateTaskPage />} />
+        {/* Страница редактирования задачи */}
         <Route path="/task/:id" element={<TaskPage />} />
       </Routes>
     </BrowserRouter>
-  </TaskProvider>
+  </>
 );
 
-export default App; 
+export default App;

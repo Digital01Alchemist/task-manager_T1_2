@@ -1,4 +1,9 @@
-export type TaskCategory = 'Bug' | 'Feature' | 'Documentation' | 'Refactor' | 'Test';
+export type TaskCategory =
+  | 'Bug'
+  | 'Feature'
+  | 'Documentation'
+  | 'Refactor'
+  | 'Test';
 export type TaskStatus = 'To Do' | 'In Progress' | 'Done';
 export type TaskPriority = 'Low' | 'Medium' | 'High';
 
@@ -9,4 +14,5 @@ export interface Task {
   category: TaskCategory;
   status: TaskStatus;
   priority: TaskPriority;
-} 
+  createdAt: string; // Добавим поле для даты создания задачи
+}

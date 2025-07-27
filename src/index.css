@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Принудительное отображение десктопной версии */
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+
+  #root {
+    min-width: 768px;
+    width: 100%;
+  }
+}
+
+/* Улучшенные стили для десктопа */
+@media (min-width: 1200px) {
+  .MuiContainer-root {
+    max-width: 1400px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .MuiContainer-root {
+    max-width: 1600px !important;
+  }
 }
 
 a {
