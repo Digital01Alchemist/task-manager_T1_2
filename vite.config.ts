@@ -13,5 +13,5 @@ export default defineConfig({
     },
   },
   // Настройка для GitHub Pages
-  base: process.env.NODE_ENV === 'production' ? '/task-manager/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/task-manager_T1_2/' : '/',
 })
